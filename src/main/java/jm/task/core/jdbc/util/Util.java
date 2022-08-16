@@ -23,6 +23,11 @@ public class Util {
                 connection.setAutoCommit(false);
             } catch (SQLException e) {
                 e.printStackTrace();
+                try {
+                    connection.rollback();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
             }
 
         return connection;
