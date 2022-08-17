@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
         // реализуйте алгоритм здесь
         UserDaoJDBCImpl userDaoJDBC = new UserDaoJDBCImpl();
-        
 
         // 1. Создание таблицы User(ов)
         userDaoJDBC.createUsersTable();
@@ -30,6 +29,5 @@ public class Main {
 
         // 5.  Удаление таблицы
         userDaoJDBC.dropUsersTable();
-
     }
 }

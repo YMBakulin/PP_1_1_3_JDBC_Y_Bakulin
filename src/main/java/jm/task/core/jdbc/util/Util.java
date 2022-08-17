@@ -17,14 +17,12 @@ public class Util {
     }
 
     public Connection getConnection() {
-
             try {
                 connection = DriverManager.getConnection(connectionURL, USERNAME, PASSWORD);
                 connection.setAutoCommit(false);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
         return connection;
     }
 }
